@@ -7,7 +7,12 @@ public class TurnManager : Singleton<TurnManager>
     [SerializeField]
     private GameObject _nextTurnButton = null;
 
+    [SerializeField] private GameObject skipTurnEffect;
+
     private ETurnState _state = ETurnState.PlayerBegin;
+
+    public int playerTurnsToSkip = 0;
+    public int enemyTurnsToSkip = 0;
 
     private void Start()
     {
@@ -51,6 +56,13 @@ public class TurnManager : Singleton<TurnManager>
 
             //Player turn
             case ETurnState.PlayerTurn:
+                if (playerTurnsToSkip > 0)
+                {
+                    playerTurnsToSkip--;
+                    Instantiate(skipTurnEffect, BattleManager.Instance.Player.transform.position, Quaternion.identity);
+                    GoToNextState();
+                    break;
+                }
                 BattleManager.Instance.Player.StartTurn();
                 CardManager.Instance.DrawHand();
                 _nextTurnButton.SetActive(true);
@@ -77,6 +89,13 @@ public class TurnManager : Singleton<TurnManager>
 
             //Enemy turn
             case ETurnState.EnemyTurn:
+                if (enemyTurnsToSkip > 0)
+                {
+                    enemyTurnsToSkip--;
+                    Instantiate(skipTurnEffect, BattleManager.Instance.Enemy.transform.position, Quaternion.identity);
+                    GoToNextState();
+                    break;
+                }
                 if (BattleManager.Instance.Enemy != null)
                     BattleManager.Instance.Enemy.StartTurn();
 

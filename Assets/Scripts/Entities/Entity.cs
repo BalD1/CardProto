@@ -220,6 +220,7 @@ public class Entity : MonoBehaviour
     public virtual void StartTurn()
     {
         _energy += 7;
+        _shield /= 2;
         _ui.ChangeEnergy(_energy);
     }
 

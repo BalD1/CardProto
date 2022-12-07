@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4061eb5198a18ec42a5d6ef76ae2b9a3, type: 3}
+  m_Name: Ultralaser
+  m_EditorClassIdentifier: 
+  cardName: Laser
+  cost: 3
+  artwork: {fileID: 21300000, guid: 6c969703b990d7548b7210a64ab7d8bf, type: 3}
+  description: "Inflige {0} d\xE9g\xE2ts, et vous fait passer {1} tours."
+  values: 0500000001000000
+  effects:
+  - effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
+    valuesIndex: 00000000
+    fx: {fileID: 5275674653668696437, guid: 19a78c987f4858c48a531774a32785d7, type: 3}
+  - effect: {fileID: 11400000, guid: 704da6945345a4e4ba2eefbfb8465709, type: 2}
+    valuesIndex: 01000000
+    fx: {fileID: 0}

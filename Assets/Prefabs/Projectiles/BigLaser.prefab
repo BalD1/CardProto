@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: 6396912069179170484, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
       propertyPath: _onCollisionFx
       value: 
-      objectReference: {fileID: 6542513377236042348, guid: c69079aaa58dde94fad00706fcd98de2, type: 3}
+      objectReference: {fileID: 6542513377236042348, guid: d25f7edb992442143a583805cdb542b7, type: 3}
     - target: {fileID: 6396912069179170484, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
       propertyPath: _rotationSpeed
       value: 1000
@@ -26,6 +26,18 @@ PrefabInstance:
     - target: {fileID: 6396912069179170485, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170485, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170485, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170485, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6396912069179170485, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,9 +79,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170485, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170487, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170487, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396912069179170487, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6396912069179170632, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}
       propertyPath: m_Name
-      value: Laser
+      value: BigLaser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c9dbaf8d4ce084f9c1d07a5f25ee6f, type: 3}

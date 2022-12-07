@@ -29,7 +29,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         _data = data;
 
-        _name.text = _data.name;
+        _name.text = _data.cardName;
         _cost.text = _data.cost.ToString();
         _artwork.sprite = _data.artwork;
         _description.text = _data.GetDescription();

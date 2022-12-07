@@ -1362,6 +1362,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af48966415acdea45af9bb203dfeef3c, type: 2}
   - {fileID: 11400000, guid: af48966415acdea45af9bb203dfeef3c, type: 2}
   - {fileID: 11400000, guid: 169070a84ac121f49a7e0257636c8d1b, type: 2}
+  - {fileID: 11400000, guid: c2ac3d9b2dd6b3641806181da7b2b596, type: 2}
+  - {fileID: 11400000, guid: c2ac3d9b2dd6b3641806181da7b2b596, type: 2}
 --- !u!1 &1245860357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1631,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isPersistant: 0
   _nextTurnButton: {fileID: 4129884670230010501}
+  skipTurnEffect: {fileID: 0}
+  playerTurnsToSkip: 0
+  enemyTurnsToSkip: 0
 --- !u!1 &1838931160
 GameObject:
   m_ObjectHideFlags: 0
