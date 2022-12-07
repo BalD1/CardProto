@@ -7,7 +7,7 @@ public class CardEffect_AddEffect : CardEffect_SO
 
     public override bool DoEffect(Entity sender, Entity target, int[] values, GameObject fx)
     {
-        if (values.Length != 1 || sender == null || fx == null)
+        if (values.Length != 1 || sender == null || target == null || fx == null)
             return false;
 
         target.AddEffect(effect, values[0]); 

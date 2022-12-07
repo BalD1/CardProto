@@ -49,6 +49,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void DestroyCard()
     {
         Destroy(gameObject);
+        CardManager.Instance.OnCardDestroyed();
     }
 
     public void OnPointerDown(PointerEventData eventData)

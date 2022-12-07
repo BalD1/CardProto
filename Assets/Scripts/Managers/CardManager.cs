@@ -18,6 +18,11 @@ public class CardManager : Singleton<CardManager>
     private int _handSize = 5;
     private int _handMaxSize = 7;
 
+    private int currentAliveCardsCount = 0;
+
+    private delegate void D_HandIsEmptied();
+    private D_HandIsEmptied _HandIsEmptied;
+
     private void Start()
     {
         _drawPile = new Queue<Card_SO>();
@@ -26,10 +31,10 @@ public class CardManager : Singleton<CardManager>
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            SpawnCard(GetCardToSpawn());
-        }
+        //if(Input.GetKeyDown(KeyCode.C))
+        //{
+        //    SpawnCard(GetCardToSpawn());
+        //}
     }
 
     private Card_SO GetCardToSpawn()
@@ -102,16 +107,44 @@ public class CardManager : Singleton<CardManager>
         }
     }
 
+    public void OnCardDestroyed()
+    {
+        currentAliveCardsCount--;
+        if (currentAliveCardsCount <= 0)
+        {
+            _HandIsEmptied?.Invoke();
+            _HandIsEmptied -= DrawHand;
+        }
+    }
+
     /// <summary>
     /// Adds a card to the hand if possible
     /// </summary>
     public void SpawnCard(Card_SO data)
     {
-        if (_cardParent.childCount >= _handMaxSize)
+        if (currentAliveCardsCount >= _handMaxSize)
             return;
 
         Card card = Instantiate(_cardPrefab, _cardParent);
         card.InitCard(data);
         _hand.Add(card);
+        currentAliveCardsCount++;
+    }
+
+    public void ShuffleSingleCard(Card cardToRemove, Card_SO cardToAdd = null)
+    {
+        if (cardToRemove == null) return;
+
+        RemoveCard(cardToRemove);
+
+        if (cardToAdd == null) cardToAdd = GetCardToSpawn();
+
+        SpawnCard(cardToAdd);
+    }
+
+    public void ShuffleAllCards()
+    {
+        ClearHand();
+        _HandIsEmptied += DrawHand;
     }
 }

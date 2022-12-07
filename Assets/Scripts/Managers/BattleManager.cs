@@ -29,7 +29,6 @@ public class BattleManager : Singleton<BattleManager>
     private void Start()
     {
         _player.InitEntity(20, _playerUI);
-        _player.DealDamage(10);
 
         SpawnEnemy();
     }

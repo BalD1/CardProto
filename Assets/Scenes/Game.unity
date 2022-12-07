@@ -1351,6 +1351,7 @@ MonoBehaviour:
   _cardPrefab: {fileID: 251405405278560327, guid: 25c9a581de1024b42a355e497194ac59, type: 3}
   _cardParent: {fileID: 632847949}
   _deck:
+  - {fileID: 11400000, guid: 612484532f24fd245a95ac534fb2c6ec, type: 2}
   - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
   - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
   - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}

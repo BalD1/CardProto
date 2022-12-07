@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4061eb5198a18ec42a5d6ef76ae2b9a3, type: 3}
+  m_Name: ShuffleHand
+  m_EditorClassIdentifier: 
+  cardName: "M\xE9lange"
+  cost: 2
+  artwork: {fileID: 21300000, guid: 72124a67bbace794fa38534a24d23cee, type: 3}
+  description: "M\xE9lange votre main."
+  values: 00000000
+  effects:
+  - effect: {fileID: 11400000, guid: c6523a33b17a140448c4842f4f6e5297, type: 2}
+    valuesIndex: 00000000
+    fx: {fileID: 6542513377236042348, guid: 801bdc23a2535734f85e02d358476b54, type: 3}
