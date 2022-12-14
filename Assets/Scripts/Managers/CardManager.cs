@@ -69,7 +69,6 @@ public class CardManager : Singleton<CardManager>
         cardAmountInDecks = new List<CardAmountInDeck>();
 
         Object[] cards = Resources.LoadAll("Scriptables/Cards", typeof(Card_SO));
-        Debug.Log(cards.Length);
         foreach (var item in cards)
         {
             cardAmountInDecks.Add(new CardAmountInDeck(item as Card_SO, 0));

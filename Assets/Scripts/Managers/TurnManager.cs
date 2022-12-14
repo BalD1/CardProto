@@ -21,8 +21,8 @@ public class TurnManager : Singleton<TurnManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            GoToNextState();
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    GoToNextState();
     }
 
     /// <summary>

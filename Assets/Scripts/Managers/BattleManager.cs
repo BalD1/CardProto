@@ -39,6 +39,12 @@ public class BattleManager : Singleton<BattleManager>
     [SerializeField]
     private EntityUI _enemyUI = null;
 
+    [field: SerializeField]
+    public GameObject gameOverPanel { get; private set; }
+
+    [field: SerializeField]
+    public GameObject quitPanel { get; private set; }
+
     [SerializeField]
     private TextMeshProUGUI _enemiesCountUI = null;
 
@@ -52,7 +58,16 @@ public class BattleManager : Singleton<BattleManager>
         SpawnEnemy();
 
         gyms = new Queue<Gym_SO>(gymsList);
+            
+        _player.onDeath += GameOver;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) quitPanel.SetActive(!quitPanel.activeSelf);
+    }
+
+    private void GameOver() => gameOverPanel.SetActive(true);
 
     /// <summary>
     /// Spawns a random enemy

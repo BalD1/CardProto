@@ -9,7 +9,11 @@ public class CardEffect_DealDamage : CardEffect_SO
             return false;
 
         Projectile p = Instantiate(fx).GetComponent<Projectile>();
-        p.transform.position = sender.ProjectileSpawnPoint.position;
+        if (sender == null || sender.ProjectileSpawnPoint == null)
+            p.transform.position = Vector2.zero;
+        else
+            p.transform.position = sender.ProjectileSpawnPoint.position;
+
         p.Init(target.transform);
 
         target.DealDamage(values[0]);

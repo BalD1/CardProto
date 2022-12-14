@@ -38,8 +38,8 @@ public class Entity : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //    Application.Quit();
     }
 
     /// <summary>
@@ -224,7 +224,9 @@ public class Entity : MonoBehaviour
     /// </summary>
     public virtual void StartTurn()
     {
-        _energy += 7;
+        int pastEnergy = _energy;
+
+        _energy = 7 + (pastEnergy / 2);
         
         if (_energy > 15) _energy = 15;
         
