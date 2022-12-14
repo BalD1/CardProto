@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Repair
   m_EditorClassIdentifier: 
   cardName: "R\xE9paration"
+  maxAmountInDeck: 3
   cost: 2
   artwork: {fileID: 21300000, guid: 5a1fc17299ebf55459023f915f9b4693, type: 3}
   description: Soigne {0}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Restauration
   m_EditorClassIdentifier: 
   cardName: Restauration
+  maxAmountInDeck: 2
   cost: 5
   artwork: {fileID: 21300000, guid: a67b58d6cddcd4345b1e001340de5a76, type: 3}
   description: Soigne {0}, gagne {1} bouclier

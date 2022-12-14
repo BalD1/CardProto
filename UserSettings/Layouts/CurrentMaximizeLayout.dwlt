@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 17041
+  controlID: 17558
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17019
+  controlID: 17582
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17020
+  controlID: 17551
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 847effff
+      m_SelectedIDs: b2600000
       m_LastClickedID: 0
       m_ExpandedIDs: 28e9ffff2afbfffff65f00000660000066600000
       m_RenameOverlay:
@@ -713,7 +713,7 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 14}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -823,8 +823,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 36600000
+    m_LastClickedInstanceID: 24630
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000806400003c640000d06d0000c07600000000000054610000
     m_RenameOverlay:
@@ -895,21 +895,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scriptables/Enemies/Drops
+    - Assets/Resources/Scriptables/Cards
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/Scriptables/Enemies/Drops
+  - Assets/Resources/Scriptables/Cards
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\CardProto
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 989c0000
-    m_LastClickedID: 40088
+    m_SelectedIDs: a8630000
+    m_LastClickedID: 25512
     m_ExpandedIDs: 0000000086630000886300008a6300008c6300008e63000090630000ac630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -963,24 +963,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 847effff
-    m_LastClickedInstanceID: -33148
+    m_SelectedInstanceIDs: b2600000
+    m_LastClickedInstanceID: 24754
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Cards
+      m_OriginalName: Cards
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 25512
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -1052,7 +1052,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -47696
+  m_LastSelectedObjectID: 24630
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17042
+  controlID: 17559
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52

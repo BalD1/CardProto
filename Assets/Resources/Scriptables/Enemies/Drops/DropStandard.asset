@@ -20,9 +20,5 @@ MonoBehaviour:
     objectsToDrop:
     - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
     weight: 100
-  - editorName: Shuffle
-    objectsToDrop:
-    - {fileID: 11400000, guid: 612484532f24fd245a95ac534fb2c6ec, type: 2}
-    weight: 100
   totalWeight: 700
   totalDrops: 3

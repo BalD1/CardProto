@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Ultralaser
   m_EditorClassIdentifier: 
   cardName: Ultralaser
-  cost: 3
+  maxAmountInDeck: 2
+  cost: 5
   artwork: {fileID: 21300000, guid: 453ef1a3858564c49ba67f6947baf69e, type: 3}
   description: "Inflige {0} d\xE9g\xE2ts, et vous fait passer {1} tours."
-  values: 0500000001000000
+  values: 0800000001000000
   effects:
   - effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
     valuesIndex: 00000000

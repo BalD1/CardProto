@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AcidLaser
   m_EditorClassIdentifier: 
   cardName: Acid Laser
+  maxAmountInDeck: 2
   cost: 10
   artwork: {fileID: 21300000, guid: 42323aae9eead444badbbaff6250adb4, type: 3}
   description: "Inflige {0} d\xE9g\xE2ts et {1} d'acide"

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ShuffleHand
   m_EditorClassIdentifier: 
   cardName: "M\xE9lange"
-  cost: 2
+  maxAmountInDeck: 2
+  cost: 0
   artwork: {fileID: 21300000, guid: 72124a67bbace794fa38534a24d23cee, type: 3}
   description: "M\xE9lange votre main."
   values: 00000000

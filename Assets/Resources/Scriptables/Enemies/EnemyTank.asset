@@ -15,6 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: dce66984076f0414a805a3b7d57bf3b8, type: 3}
   size: {x: 1.5, y: 1.5}
   maxHealth: 15
+  enemyDrops: {fileID: 11400000, guid: dc44c660eb1301340819e65db2b6829a, type: 2}
   order: 0
   actions:
   - icon: {fileID: 21300000, guid: a67b58d6cddcd4345b1e001340de5a76, type: 3}
