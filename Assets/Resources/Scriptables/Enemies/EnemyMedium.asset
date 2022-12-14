@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa711e01d128f74883f9a13c815ee3e, type: 3}
   m_Name: EnemyMedium
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3d126eb2787685c41963ab5e3074521c, type: 3}
-  size: {x: 1, y: 1}
+  sprite: {fileID: 21300000, guid: 265ba9484bd03be4383ccca7fcbb2d3e, type: 3}
+  size: {x: 1.3, y: 1.3}
   maxHealth: 12
   enemyDrops: {fileID: 11400000, guid: 7cac96fbb209b084fa0be3efbe92b56e, type: 2}
   order: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa711e01d128f74883f9a13c815ee3e, type: 3}
   m_Name: EnemyAcid
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 3d126eb2787685c41963ab5e3074521c, type: 3}
+  sprite: {fileID: 21300000, guid: 7028c664d6a9f3d468517a8495d9d3d2, type: 3}
   size: {x: 1, y: 1}
   maxHealth: 7
   enemyDrops: {fileID: 11400000, guid: 454487ecc47f351468c04f0c61c44a60, type: 2}

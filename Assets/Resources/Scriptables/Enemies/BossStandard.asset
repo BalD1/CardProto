@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa711e01d128f74883f9a13c815ee3e, type: 3}
   m_Name: BossStandard
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 265ba9484bd03be4383ccca7fcbb2d3e, type: 3}
+  sprite: {fileID: 21300000, guid: dce66984076f0414a805a3b7d57bf3b8, type: 3}
   size: {x: 3, y: 3}
   maxHealth: 50
   enemyDrops: {fileID: 11400000, guid: 8f78db4aee849234db64aa7228352a73, type: 2}

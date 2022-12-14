@@ -1868,9 +1868,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f44b3688b6f02c49b03705bccf4a28d, type: 2}
   _enemyData:
   - {fileID: 11400000, guid: 2ed57ee82560a6d4baae8fd1d5a91494, type: 2}
+  - {fileID: 11400000, guid: 380a09311cee9014785f5385ef16d3ae, type: 2}
   - {fileID: 11400000, guid: 45392599cf86e49469ed3de7dfc1d0e4, type: 2}
   - {fileID: 11400000, guid: a8257ba360d42f141a0291444059a5d2, type: 2}
-  - {fileID: 11400000, guid: 380a09311cee9014785f5385ef16d3ae, type: 2}
   _enemyPrefab: {fileID: 4126049616576737311, guid: 60fa319f2079c2940913d7d347fab40e, type: 3}
   _enemyParent: {fileID: 715135432}
   _playerUI: {fileID: 6108256212077007631}
