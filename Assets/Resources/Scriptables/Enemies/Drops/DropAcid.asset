@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3908c7c29d186b4e89bae793ec2100c, type: 3}
-  m_Name: DropStandard
+  m_Name: DropAcid
   m_EditorClassIdentifier: 
   <dropTable>k__BackingField:
   - editorName: N/A
     objectsToDrop: []
     weight: 500
-  - editorName: Laser
+  - editorName: Acid
     objectsToDrop:
-    - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
+    - {fileID: 11400000, guid: 1c88c44785722674980b4414d8ad8701, type: 2}
     weight: 100
-  - editorName: Shuffle
+  - editorName: AcidLaser
     objectsToDrop:
-    - {fileID: 11400000, guid: 612484532f24fd245a95ac534fb2c6ec, type: 2}
-    weight: 100
-  totalWeight: 700
+    - {fileID: 11400000, guid: 4d1ff7b8bdda1de4ab0308c85323580a, type: 2}
+    weight: 5
+  totalWeight: 605
   totalDrops: 3

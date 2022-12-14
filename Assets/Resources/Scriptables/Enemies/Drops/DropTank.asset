@@ -10,19 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3908c7c29d186b4e89bae793ec2100c, type: 3}
-  m_Name: DropStandard
+  m_Name: DropTank
   m_EditorClassIdentifier: 
   <dropTable>k__BackingField:
   - editorName: N/A
     objectsToDrop: []
     weight: 500
-  - editorName: Laser
+  - editorName: Shield
     objectsToDrop:
-    - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
+    - {fileID: 11400000, guid: af48966415acdea45af9bb203dfeef3c, type: 2}
     weight: 100
-  - editorName: Shuffle
+  - editorName: Repair
     objectsToDrop:
-    - {fileID: 11400000, guid: 612484532f24fd245a95ac534fb2c6ec, type: 2}
+    - {fileID: 11400000, guid: 4cc33a69dd6ed094cbc945cbdb8aae51, type: 2}
     weight: 100
-  totalWeight: 700
-  totalDrops: 3
+  - editorName: Restauration
+    objectsToDrop:
+    - {fileID: 11400000, guid: 169070a84ac121f49a7e0257636c8d1b, type: 2}
+    weight: 50
+  totalWeight: 1250
+  totalDrops: 4
