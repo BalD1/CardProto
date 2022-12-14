@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkipTurnEffect : MonoBehaviour
+[CreateAssetMenu(fileName = "New Skip Turn", menuName = "Effects/SkipTurn")]
+public class SkipTurnEffect : Effect_SO
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject fx = null;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private bool targetPlayer;
+
+    override public void Tick(Entity owner, int nb)
     {
-        
+        if (targetPlayer) TurnManager.Instance.skipNextPlayerTurn = true;
+        else TurnManager.Instance.skipNextEnemyTurn = true;
+
+        owner.RemoveStackFromEffect(this, 1);
+
+        if (fx != null)
+            Instantiate(fx, owner.transform.position, Quaternion.identity);
+
     }
 }

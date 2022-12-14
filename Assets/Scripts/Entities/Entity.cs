@@ -210,7 +210,7 @@ public class Entity : MonoBehaviour
 
         foreach (Effect_SO effect in effects.Keys)
         {
-            effect.Tick(this, _beginTurnEffects[effect]);
+            effect?.Tick(this, _beginTurnEffects[effect]);
         }
     }
 
@@ -220,6 +220,9 @@ public class Entity : MonoBehaviour
     public virtual void StartTurn()
     {
         _energy += 7;
+        
+        if (_energy > 15) _energy = 15;
+        
         _shield /= 2;
         _ui.ChangeEnergy(_energy);
     }
@@ -229,7 +232,6 @@ public class Entity : MonoBehaviour
     /// </summary>
     public virtual void EndTurn()
     {
-        _energy = 0;
         _ui.ChangeEnergy(_energy);
 
         //Create new dictionary to avoid direct reference

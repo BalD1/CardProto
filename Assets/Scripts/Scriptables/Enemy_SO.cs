@@ -9,6 +9,8 @@ public class Enemy_SO : ScriptableObject
     /// </summary>
     public Sprite sprite = null;
 
+    public Vector2 size = Vector2.one;
+
     /// <summary>
     /// Health of the enemy
     /// </summary>

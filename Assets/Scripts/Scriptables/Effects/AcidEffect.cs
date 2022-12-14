@@ -7,7 +7,9 @@ public class AcidEffect : Effect_SO
 
     public override void Tick(Entity owner, int nb)
     {
-        owner.DealDamage(nb);
+        int remainingDamagesFromAcid = owner.RemoveShield(nb);
+
+        if (remainingDamagesFromAcid > 0) owner.DealDamage(remainingDamagesFromAcid / 2);
 
         if (!owner.IsDead)
         {

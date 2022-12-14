@@ -21,6 +21,6 @@ MonoBehaviour:
   - effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
     valuesIndex: 00000000
     fx: {fileID: 5275674653668696437, guid: 19a78c987f4858c48a531774a32785d7, type: 3}
-  - effect: {fileID: 11400000, guid: 704da6945345a4e4ba2eefbfb8465709, type: 2}
+  - effect: {fileID: 11400000, guid: c0797b87185136f4f9a946e6ea8b2d9b, type: 2}
     valuesIndex: 01000000
     fx: {fileID: 0}

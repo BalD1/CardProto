@@ -19,6 +19,7 @@ public class CardManager : Singleton<CardManager>
     private int _handMaxSize = 7;
 
     private int currentAliveCardsCount = 0;
+    private int lastCardsCount;
 
     private delegate void D_HandIsEmptied();
     private D_HandIsEmptied _HandIsEmptied;
@@ -82,6 +83,15 @@ public class CardManager : Singleton<CardManager>
             SpawnCard(GetCardToSpawn());
         }
     }
+    public void DrawHandWithLastSize()
+    {
+        for (int i = 0; i < lastCardsCount; i++)
+        {
+            SpawnCard(GetCardToSpawn());
+        }
+
+        lastCardsCount = 0;
+    }
 
     /// <summary>
     /// Removes all cards in the hand
@@ -140,6 +150,15 @@ public class CardManager : Singleton<CardManager>
         if (cardToAdd == null) cardToAdd = GetCardToSpawn();
 
         SpawnCard(cardToAdd);
+    }
+
+    public void ShuffleCurrentHand()
+    {
+        lastCardsCount = currentAliveCardsCount;
+
+        ClearHand();
+
+        _HandIsEmptied += DrawHandWithLastSize;
     }
 
     public void ShuffleAllCards()

@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a06572cd171c5459e87882737abe65, type: 3}
-  m_Name: SkipPlayerTurn
+  m_Script: {fileID: 11500000, guid: d3ec46f84f8c11b4a985f56a527f0b5c, type: 3}
+  m_Name: SkipEnemyTurn
   m_EditorClassIdentifier: 
-  targetPlayer: 1
+  order: 0
+  icon: {fileID: 21300000, guid: 63305dbfb6bd0d644bc24f54eb13c3fb, type: 3}
+  fx: {fileID: 0}
+  targetPlayer: 0

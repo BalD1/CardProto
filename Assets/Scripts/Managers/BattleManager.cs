@@ -1,3 +1,5 @@
+using System.Text;
+using TMPro;
 using UnityEngine;
 
 public class BattleManager : Singleton<BattleManager>
@@ -9,6 +11,12 @@ public class BattleManager : Singleton<BattleManager>
     [Header("Enemy")]
     [SerializeField]
     private Enemy _enemy = null;
+
+    [SerializeField] private int enemiesToBattleBeforeBoss = 5;
+    private int currentEnemiesCount = 0;
+
+    [SerializeField]
+    private Enemy_SO[] _bossData = null;
 
     [SerializeField]
     private Enemy_SO[] _enemyData = null;
@@ -26,6 +34,9 @@ public class BattleManager : Singleton<BattleManager>
     [SerializeField]
     private EntityUI _enemyUI = null;
 
+    [SerializeField]
+    private TextMeshProUGUI _enemiesCountUI = null;
+
     private void Start()
     {
         _player.InitEntity(20, _playerUI);
@@ -38,10 +49,32 @@ public class BattleManager : Singleton<BattleManager>
     /// </summary>
     public void SpawnEnemy()
     {
-        Enemy_SO data = _enemyData[Random.Range(0, _enemyData.Length)];
+        Enemy_SO data;
+
+        bool bossBattle = currentEnemiesCount >= enemiesToBattleBeforeBoss;
+        if (bossBattle)
+        {
+            data = _bossData[Random.Range(0, _bossData.Length)];
+            currentEnemiesCount = 0;
+        }
+        else data = _enemyData[Random.Range(0, _enemyData.Length)];
+        
         _enemy = Instantiate(_enemyPrefab, _enemyParent);
         _enemy.InitEnemy(data, _enemyUI);
         _enemy.onDeath += OnEnemyDeath;
+
+        if (bossBattle)
+        {
+            _enemiesCountUI.text = "/!\\";
+        }
+        else
+        {
+            currentEnemiesCount++;
+
+            string text = $"{currentEnemiesCount} / {enemiesToBattleBeforeBoss}";
+            _enemiesCountUI.text = text;
+        }
+            
     }
 
     private void OnEnemyDeath()

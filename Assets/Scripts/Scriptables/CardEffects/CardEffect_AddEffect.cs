@@ -7,11 +7,13 @@ public class CardEffect_AddEffect : CardEffect_SO
 
     public override bool DoEffect(Entity sender, Entity target, int[] values, GameObject fx)
     {
-        if (values.Length != 1 || sender == null || target == null || fx == null)
+        if (values.Length != 1 || sender == null || target == null)
             return false;
 
         target.AddEffect(effect, values[0]); 
-        Instantiate(fx, target.transform.position, Quaternion.identity);
+
+        if (fx != null)
+            Instantiate(fx, target.transform.position, Quaternion.identity);
         
         return true;
     }

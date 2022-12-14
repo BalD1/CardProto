@@ -5,6 +5,9 @@ public class Enemy : Entity
     [SerializeField]
     private SpriteRenderer _actionIcon = null;
 
+    //[SerializeField]
+    //private drop
+
     private Enemy_SO _data = null;
 
     private int _actionIndex = 0;
@@ -13,6 +16,8 @@ public class Enemy : Entity
     {
         _data = data;
         _shipSprite.sprite = _data.sprite;
+
+        _shipSprite.transform.localScale = data.size;
 
         //Init action to a random one
         _actionIndex = Random.Range(0, _data.actions.Length);

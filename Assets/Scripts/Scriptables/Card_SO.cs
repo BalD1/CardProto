@@ -82,6 +82,7 @@ public class Card_SO : ScriptableObject
 
             bool effectPlayed = e.effect.DoEffect(BattleManager.Instance.Player, BattleManager.Instance.Enemy, usedValues, e.fx);
 
+
             if (!effectPlayed)
                 cardPlayed = false;
         }
