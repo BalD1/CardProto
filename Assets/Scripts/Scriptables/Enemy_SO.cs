@@ -16,6 +16,8 @@ public class Enemy_SO : ScriptableObject
     /// </summary>
     public int maxHealth = 0;
 
+    public Drop_SO enemyDrops = null;
+
     /// <summary>
     /// How will the enemy will play the actions
     /// </summary>

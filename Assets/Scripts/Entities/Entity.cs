@@ -49,15 +49,20 @@ public class Entity : MonoBehaviour
     {
         _ui = ui;
         _maxHealth = maxHealth;
-        _health = maxHealth;
-        _shield = 0;
-        _energy = 0;
+        ResetStats();
 
         _ui.ChangeHealth(_health, maxHealth);
         _ui.ChangeShield(_shield);
         _ui.ChangeEnergy(_energy);
 
         _shieldSprite.SetActive(false);
+    }
+
+    public void ResetStats()
+    {
+        _health = _maxHealth;
+        _shield = 0;
+        _energy = 0;
     }
 
     #region Health/Shield/Energy

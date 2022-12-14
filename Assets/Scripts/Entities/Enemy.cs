@@ -5,9 +5,6 @@ public class Enemy : Entity
     [SerializeField]
     private SpriteRenderer _actionIcon = null;
 
-    //[SerializeField]
-    //private drop
-
     private Enemy_SO _data = null;
 
     private int _actionIndex = 0;
@@ -44,6 +41,8 @@ public class Enemy : Entity
     protected override void Die()
     {
         _actionIcon.gameObject.SetActive(false);
+
+        _data.enemyDrops?.TryDrop();
 
         base.Die();
     }

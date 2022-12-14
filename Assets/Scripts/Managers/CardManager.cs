@@ -11,7 +11,31 @@ public class CardManager : Singleton<CardManager>
     private Transform _cardParent = null;
 
     [SerializeField]
-    private Card_SO[] _deck = null;
+    private List<Card_SO> _deck = null;
+
+    [System.Serializable]
+    private class CardAmountInDeck
+    {
+        [SerializeField]
+        private Card_SO card;
+        [SerializeField]
+        private int amountInDeck;
+
+        public Card_SO Card { get => card; }
+        public int AmountInDeck { get => amountInDeck; set => amountInDeck = value; }
+
+        public CardAmountInDeck(Card_SO card, int amount = 1)
+        {
+            this.card = card;
+            amountInDeck = amount;
+        }
+    }
+
+    [SerializeField]
+    private List<CardAmountInDeck> cardAmountInDecks = new List<CardAmountInDeck>();
+
+    [InspectorButton(nameof(InitCardsAmountsInDeck))]
+    [SerializeField] private bool SetupCardAmounts;
 
     private Queue<Card_SO> _drawPile = null;
     private List<Card> _hand = null;
@@ -28,6 +52,8 @@ public class CardManager : Singleton<CardManager>
     {
         _drawPile = new Queue<Card_SO>();
         _hand = new List<Card>();
+
+        InitCardsAmountsInDeck();
     }
 
     private void Update()
@@ -36,6 +62,51 @@ public class CardManager : Singleton<CardManager>
         //{
         //    SpawnCard(GetCardToSpawn());
         //}
+    }
+
+    public void InitCardsAmountsInDeck()
+    {
+        cardAmountInDecks = new List<CardAmountInDeck>();
+
+        Object[] cards = Resources.LoadAll("Scriptables/Cards", typeof(Card_SO));
+        Debug.Log(cards.Length);
+        foreach (var item in cards)
+        {
+            cardAmountInDecks.Add(new CardAmountInDeck(item as Card_SO, 0));
+        }
+
+        foreach (var item in cardAmountInDecks)
+        {
+            foreach (var cardDeck in _deck)
+            {
+                if (item.Card == cardDeck) item.AmountInDeck++;
+            }
+        }
+    }
+
+    public void AddCardToDeck(Card_SO newCard)
+    {
+        bool canAdd = true;
+
+        foreach (var item in cardAmountInDecks)
+        {
+            if (item.Card == newCard)
+            {
+                if (item.AmountInDeck >= newCard.maxAmountInDeck)
+                {
+                    canAdd = false;
+                }
+                else item.AmountInDeck++;
+
+                break;
+            }
+        }
+
+        if(canAdd)  _deck.Add(newCard);
+    }
+    public void AddCardsToDeck(Card_SO[] newCards)
+    {
+        foreach (var item in newCards) AddCardToDeck(item);
     }
 
     private Card_SO GetCardToSpawn()

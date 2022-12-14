@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleManager : Singleton<BattleManager>
 {
@@ -12,11 +14,14 @@ public class BattleManager : Singleton<BattleManager>
     [SerializeField]
     private Enemy _enemy = null;
 
-    [SerializeField] private int enemiesToBattleBeforeBoss = 5;
-    private int currentEnemiesCount = 0;
+    [SerializeField] private List<Gym_SO> gymsList = new List<Gym_SO>();
+    private Queue<Gym_SO> gyms = null;
+    private Gym_SO currentGym = null;
 
-    [SerializeField]
-    private Enemy_SO[] _bossData = null;
+    private int currentGymRound = 0;
+    private int maxGymRound = 0;
+
+    private bool isInGym = false;
 
     [SerializeField]
     private Enemy_SO[] _enemyData = null;
@@ -37,11 +42,16 @@ public class BattleManager : Singleton<BattleManager>
     [SerializeField]
     private TextMeshProUGUI _enemiesCountUI = null;
 
+    [SerializeField]
+    private Button _startGymButton = null;
+
     private void Start()
     {
         _player.InitEntity(20, _playerUI);
 
         SpawnEnemy();
+
+        gyms = new Queue<Gym_SO>(gymsList);
     }
 
     /// <summary>
@@ -49,32 +59,60 @@ public class BattleManager : Singleton<BattleManager>
     /// </summary>
     public void SpawnEnemy()
     {
-        Enemy_SO data;
+        if (currentGym?.enemies.Count == 0) EndGym();
 
-        bool bossBattle = currentEnemiesCount >= enemiesToBattleBeforeBoss;
-        if (bossBattle)
+        if (isInGym)
         {
-            data = _bossData[Random.Range(0, _bossData.Length)];
-            currentEnemiesCount = 0;
-        }
-        else data = _enemyData[Random.Range(0, _enemyData.Length)];
-        
-        _enemy = Instantiate(_enemyPrefab, _enemyParent);
-        _enemy.InitEnemy(data, _enemyUI);
-        _enemy.onDeath += OnEnemyDeath;
+            Enemy_SO data = currentGym.enemies.Dequeue();
 
-        if (bossBattle)
-        {
-            _enemiesCountUI.text = "/!\\";
+            _enemy = Instantiate(_enemyPrefab, _enemyParent);
+            _enemy.InitEnemy(data, _enemyUI);
+            _enemy.onDeath += OnEnemyDeath;
+
+            currentGymRound++;
+
+            string text = $"{currentGymRound} / {maxGymRound}";
+            _enemiesCountUI.text = text;
         }
         else
         {
-            currentEnemiesCount++;
+            Enemy_SO data = _enemyData[Random.Range(0, _enemyData.Length)];
 
-            string text = $"{currentEnemiesCount} / {enemiesToBattleBeforeBoss}";
-            _enemiesCountUI.text = text;
+            _enemy = Instantiate(_enemyPrefab, _enemyParent);
+            _enemy.InitEnemy(data, _enemyUI);
+            _enemy.onDeath += OnEnemyDeath;
         }
-            
+    }
+
+    public void StartNextGym()
+    {
+        _enemy.DealDamage(_enemy.MaxHealth * 2);
+        currentGym = gyms.Dequeue();
+
+        if (currentGym == null) return;
+
+        _player.ResetStats();
+
+        currentGym.Init();
+
+        maxGymRound = currentGym.enemies.Count;
+
+        isInGym = true;
+
+        _enemiesCountUI.gameObject.SetActive(true);
+        _startGymButton.gameObject.SetActive(false);
+
+        if (gyms.Count == 0) gyms = new Queue<Gym_SO>(gymsList);
+        TurnManager.Instance.GoToNextState();
+    }
+
+    private void EndGym()
+    {
+        isInGym = false;
+        _enemiesCountUI.gameObject.SetActive(false);
+        _startGymButton.gameObject.SetActive(true);
+        currentGymRound = 0;
+        maxGymRound = 0;
     }
 
     private void OnEnemyDeath()

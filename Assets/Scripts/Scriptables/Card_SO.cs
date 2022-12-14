@@ -9,6 +9,8 @@ public class Card_SO : ScriptableObject
     /// </summary>
     public string cardName = string.Empty;
 
+    public int maxAmountInDeck = 5;
+
     /// <summary>
     /// Cost in energy of the card
     /// </summary>
