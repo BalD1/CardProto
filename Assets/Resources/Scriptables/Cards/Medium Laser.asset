@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4061eb5198a18ec42a5d6ef76ae2b9a3, type: 3}
-  m_Name: Ultralaser
+  m_Name: Medium Laser
   m_EditorClassIdentifier: 
-  cardName: Ultralaser
-  maxAmountInDeck: 2
-  cost: 6
-  artwork: {fileID: 21300000, guid: 453ef1a3858564c49ba67f6947baf69e, type: 3}
-  description: "Inflige {0} d\xE9g\xE2ts, et vous fait passer {1} tours."
-  values: 0800000001000000
+  cardName: Laser Medium
+  maxAmountInDeck: 4
+  cost: 3
+  artwork: {fileID: 21300000, guid: b661222994bd3f546bbd85a82dba5400, type: 3}
+  description: "Inflige {0} d\xE9g\xE2ts"
+  values: 04000000
   effects:
   - effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
     valuesIndex: 00000000
-    fx: {fileID: 5275674653668696437, guid: 19a78c987f4858c48a531774a32785d7, type: 3}
-  - effect: {fileID: 11400000, guid: c0797b87185136f4f9a946e6ea8b2d9b, type: 2}
-    valuesIndex: 01000000
-    fx: {fileID: 0}
+    fx: {fileID: 5275674653668696437, guid: c8615e34926ba3c4197ee80a99608eea, type: 3}

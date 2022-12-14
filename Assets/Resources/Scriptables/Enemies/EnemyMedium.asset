@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fa711e01d128f74883f9a13c815ee3e, type: 3}
-  m_Name: EnemyAcid
+  m_Name: EnemyMedium
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 3d126eb2787685c41963ab5e3074521c, type: 3}
   size: {x: 1, y: 1}
-  maxHealth: 7
-  enemyDrops: {fileID: 11400000, guid: 454487ecc47f351468c04f0c61c44a60, type: 2}
+  maxHealth: 12
+  enemyDrops: {fileID: 11400000, guid: 7cac96fbb209b084fa0be3efbe92b56e, type: 2}
   order: 0
   actions:
   - icon: {fileID: 21300000, guid: f95f697d66d238446b1ab717def09945, type: 3}
-    effect: {fileID: 11400000, guid: 0d34ef655089f4b46a88f120602715a1, type: 2}
-    values: 05000000
-    fx: {fileID: 6542513377236042348, guid: 5f513eda36e9dae41b1afcfde6198348, type: 3}
+    effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
+    values: 08000000
+    fx: {fileID: 5890870852051337647, guid: 85981b8090a5ba543b78cb6045eadda9, type: 3}
   - icon: {fileID: 21300000, guid: f95f697d66d238446b1ab717def09945, type: 3}
-    effect: {fileID: 11400000, guid: 0d34ef655089f4b46a88f120602715a1, type: 2}
+    effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
+    values: 08000000
+    fx: {fileID: 5890870852051337647, guid: 85981b8090a5ba543b78cb6045eadda9, type: 3}
+  - icon: {fileID: 21300000, guid: f95f697d66d238446b1ab717def09945, type: 3}
+    effect: {fileID: 11400000, guid: 71342d9c93d23c14f85804fe89297348, type: 2}
     values: 02000000
     fx: {fileID: 6542513377236042348, guid: 5f513eda36e9dae41b1afcfde6198348, type: 3}
-  - icon: {fileID: 21300000, guid: a67b58d6cddcd4345b1e001340de5a76, type: 3}
-    effect: {fileID: 11400000, guid: cad512fd9e8009141a9453f85276d573, type: 2}
-    values: 0a000000
-    fx: {fileID: 1015939761407062974, guid: 082aecb991722eb4481fcfce46e1f7e0, type: 3}

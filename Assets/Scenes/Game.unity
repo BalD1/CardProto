@@ -1490,9 +1490,11 @@ MonoBehaviour:
   _deck:
   - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
   - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
+  - {fileID: 11400000, guid: 9f4a4ddfbc4031c4d98c1a323634477a, type: 2}
   - {fileID: 11400000, guid: 1c88c44785722674980b4414d8ad8701, type: 2}
+  - {fileID: 11400000, guid: 1c88c44785722674980b4414d8ad8701, type: 2}
+  - {fileID: 11400000, guid: af48966415acdea45af9bb203dfeef3c, type: 2}
   - {fileID: 11400000, guid: 4cc33a69dd6ed094cbc945cbdb8aae51, type: 2}
-  - {fileID: 11400000, guid: 169070a84ac121f49a7e0257636c8d1b, type: 2}
   cardAmountInDecks:
   - card: {fileID: 11400000, guid: 1c88c44785722674980b4414d8ad8701, type: 2}
     amountInDeck: 2
@@ -1863,10 +1865,12 @@ MonoBehaviour:
   _enemy: {fileID: 0}
   gymsList:
   - {fileID: 11400000, guid: 3b07b9667c7396d47b224efd9c5e1e16, type: 2}
+  - {fileID: 11400000, guid: 5f44b3688b6f02c49b03705bccf4a28d, type: 2}
   _enemyData:
   - {fileID: 11400000, guid: 2ed57ee82560a6d4baae8fd1d5a91494, type: 2}
   - {fileID: 11400000, guid: 45392599cf86e49469ed3de7dfc1d0e4, type: 2}
   - {fileID: 11400000, guid: a8257ba360d42f141a0291444059a5d2, type: 2}
+  - {fileID: 11400000, guid: 380a09311cee9014785f5385ef16d3ae, type: 2}
   _enemyPrefab: {fileID: 4126049616576737311, guid: 60fa319f2079c2940913d7d347fab40e, type: 3}
   _enemyParent: {fileID: 715135432}
   _playerUI: {fileID: 6108256212077007631}

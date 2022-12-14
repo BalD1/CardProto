@@ -17,5 +17,9 @@ MonoBehaviour:
     objectsToDrop:
     - {fileID: 11400000, guid: c2ac3d9b2dd6b3641806181da7b2b596, type: 2}
     weight: 1
-  totalWeight: 1
-  totalDrops: 1
+  - editorName: EMP
+    objectsToDrop:
+    - {fileID: 11400000, guid: c1e478c2cd51c434eafbed0bfd504bab, type: 2}
+    weight: 1
+  totalWeight: 2
+  totalDrops: 2

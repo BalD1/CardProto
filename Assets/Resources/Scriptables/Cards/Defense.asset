@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4061eb5198a18ec42a5d6ef76ae2b9a3, type: 3}
+  m_Name: Defense
+  m_EditorClassIdentifier: 
+  cardName: "D\xE9fense"
+  maxAmountInDeck: 3
+  cost: 5
+  artwork: {fileID: 21300000, guid: 31e76f15d43e78448a33e6a9581aa3ff, type: 3}
+  description: Vous soigne {0} et vous ajoute {1} bouclier, mais vous fais passer
+    {2} tour.
+  values: 070000000600000001000000
+  effects:
+  - effect: {fileID: 11400000, guid: 28fb87d78b97e8e47ac8e45e689f2884, type: 2}
+    valuesIndex: 00000000
+    fx: {fileID: 4312754960995376076, guid: 6a3e60fa50789f9498ca4b47e686f5a7, type: 3}
+  - effect: {fileID: 11400000, guid: cad512fd9e8009141a9453f85276d573, type: 2}
+    valuesIndex: 01000000
+    fx: {fileID: 1015939761407062974, guid: 082aecb991722eb4481fcfce46e1f7e0, type: 3}
+  - effect: {fileID: 11400000, guid: c0797b87185136f4f9a946e6ea8b2d9b, type: 2}
+    valuesIndex: 02000000
+    fx: {fileID: 0}

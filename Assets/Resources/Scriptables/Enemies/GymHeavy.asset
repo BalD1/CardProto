@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3de48b25f8e5da84bb7c3756f5587c36, type: 3}
-  m_Name: GymStandard
+  m_Name: GymHeavy
   m_EditorClassIdentifier: 
   enemiesList:
-  - {fileID: 11400000, guid: 2ed57ee82560a6d4baae8fd1d5a91494, type: 2}
-  - {fileID: 11400000, guid: 45392599cf86e49469ed3de7dfc1d0e4, type: 2}
-  - {fileID: 11400000, guid: 2ed57ee82560a6d4baae8fd1d5a91494, type: 2}
   - {fileID: 11400000, guid: a8257ba360d42f141a0291444059a5d2, type: 2}
-  - {fileID: 11400000, guid: 2ed57ee82560a6d4baae8fd1d5a91494, type: 2}
-  - {fileID: 11400000, guid: d262653ece4f7bf41843b76c62fad6aa, type: 2}
+  - {fileID: 11400000, guid: 45392599cf86e49469ed3de7dfc1d0e4, type: 2}
+  - {fileID: 11400000, guid: 380a09311cee9014785f5385ef16d3ae, type: 2}
+  - {fileID: 11400000, guid: a8257ba360d42f141a0291444059a5d2, type: 2}
+  - {fileID: 11400000, guid: 380a09311cee9014785f5385ef16d3ae, type: 2}
+  - {fileID: 11400000, guid: 3453ffa08e8c7a04797be41be3682903, type: 2}
